@@ -12,7 +12,6 @@ class User {
   {
     $this->username = $username;
     $this->email = $email;
-
     $this->dateCreated = new DateTime(); // Текущие дата и время
   }
 

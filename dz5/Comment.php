@@ -36,7 +36,4 @@ class Comment {
   public function setText(string $text): void {
     $this->text = $text;
   }
-
-
-
 }

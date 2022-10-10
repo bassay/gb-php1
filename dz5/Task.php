@@ -1,17 +1,17 @@
 <?php
-$task = new Task();
-$task->setDescription("Мое описание");
-$task->setPriority(5);
-
-echo "<pre>";
-var_dump($task);
-echo "</pre>";
+//$task = new Task();
+//$task->setDescription("Мое описание");
+//$task->setPriority(5);
+//
+//echo "<pre>";
+//var_dump($task);
+//echo "</pre>";
 
 class Task {
   private string $description;
   private DateTime $dateCreated;
-  private DateTime $dateUpdated;
-  private DateTime $dateDone;
+  private ?DateTime $dateUpdated;
+  private ?DateTime $dateDone;
   private int $priority;
   private bool $isDone = false;
   private User $user;
@@ -68,7 +68,7 @@ class Task {
   public function isDone(): bool {
     return $this->isDone;
   }
-  public function setIsDone(): void {
+  private function setIsDone(): void {
     $this->isDone = true;
   }
 
